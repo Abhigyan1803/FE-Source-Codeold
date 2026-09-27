@@ -18,12 +18,12 @@ export class Links {
 
 // ADVANTAL SERVER
   // public static IP = 'http://65.2.78.210:8080/';
-  public static IP = 'http://151.106.39.5:8080/';
+  // public static IP = 'http://151.106.39.5:8080/';
 
   // LOCAL CONNECTION
-  // public static IP = 'http://192.168.0.31:8080/';
+  public static IP = 'http://localhost:8080/';
 
-  public static base = Links.IP + 'ImaLms/';
+  public static base = Links.IP;
   // public static base = Links.IP + 'ImaLms/';
   // public static base = Links.IP + 'ImaLms/';
 

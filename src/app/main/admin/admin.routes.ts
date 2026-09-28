@@ -16,6 +16,7 @@ export const ADMIN_ROUTES: Routes = [
     { path: 'change-password', loadChildren: () => import('./change-password/change-password.module').then(m => m.ChangePasswordModule) },
     { path: 'Adjutant-Branch-Management', loadChildren: () => import('./adjutant-branch-management/adjutant.module').then(m => m.AdjutantModule) },
     { path: 'it', loadChildren: () => import('./complaint-requirement/complaint-requirement.module').then(m => m.ComplaintRequirementModule) },
+    { path: 'oc-feedback', loadChildren: () => import('./oc-feedback-admin/oc-feedback-admin.module').then(m => m.OcFeedbackAdminModule) },
     { path: 'record', loadChildren: () => import('./service-record/service-record.module').then(m => m.ServiceRecordModule) },
     { path: 'GS-Branch', loadChildren: () => import('./gs-branch/gs-branch.module').then(m => m.GS_BranchModule) },
     { path: 'user-access', loadChildren: () => import('./user-access/user-access.module').then(m => m.UserAccessModule) },

@@ -100,7 +100,7 @@ export class AddComplaintsComponent implements OnInit {
     return this.addComplaintsForm.controls;
   }
   goBack() {
-    this.router.navigate(['/main/trg-team/it']);
+    this.router.navigate(['/main/trg-team/complaint']);
   }
 
   addComplaints() {
@@ -124,7 +124,7 @@ export class AddComplaintsComponent implements OnInit {
             this.adminservice.openSnackbar(res.message)
             this.cdref.detectChanges();
             this.spinner.hide();
-            this.router.navigate(['/main/trg-team/it']);
+            this.router.navigate(['/main/trg-team/complaint']);
           } else {
             this.spinner.hide();
             this.adminservice.openSnackbar(res.message)

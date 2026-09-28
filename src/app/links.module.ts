@@ -1137,6 +1137,10 @@ export class Links {
   /**================GENTLEMAN (GC) CADET LINKS============= */
   public static ADD_ENTITLEMENT_FROM_GC = Links.base + 'api/entitle/add-entitle';
   public static GET_ENTITLEMENTS_LIST_BY_TYPE = Links.base + 'api/entitle/get-all-entitle-by-type_cadetId';
+  /** ==================== OC WEBSITE FEEDBACK ==================== */
+  public static SUBMIT_OC_FEEDBACK = Links.base + 'api/oc-feedback/submit';
+  public static GET_OC_FEEDBACK_LIST = Links.base + 'api/oc-feedback/list';
+  public static DOWNLOAD_OC_FEEDBACK_EXCEL = Links.base + 'api/oc-feedback/export';
 
 
   /** ============ACADEMIC DEPARTMENT================= */

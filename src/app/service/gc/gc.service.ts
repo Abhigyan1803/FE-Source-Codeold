@@ -208,4 +208,29 @@ export class GcService {
     return this.http.get(Links.GET_ENTITLEMENTS_LIST_BY_TYPE + `?type=${type}`, httpOptions).pipe(map((response: any) => response));
 
   }
+  submitOcFeedback(data) {
+    const httpOptions = {
+      headers: new HttpHeaders()
+        .set('Authorization', `Bearer ${this.authService.getJWT_Token}`)
+    };
+    return this.http.post(Links.SUBMIT_OC_FEEDBACK, data, httpOptions).pipe(map((response: any) => response));
+  }
+
+  getOcFeedbackList() {
+    const httpOptions = {
+      headers: new HttpHeaders()
+        .set('Authorization', `Bearer ${this.authService.getJWT_Token}`)
+    };
+    return this.http.get(Links.GET_OC_FEEDBACK_LIST, httpOptions).pipe(map((response: any) => response));
+  }
+
+  downloadOcFeedbackExcel() {
+    const httpOptions = {
+      headers: new HttpHeaders()
+        .set('Authorization', `Bearer ${this.authService.getJWT_Token}`),
+      observe: 'response' as const,
+      responseType: 'blob' as const
+    };
+    return this.http.get(Links.DOWNLOAD_OC_FEEDBACK_EXCEL, httpOptions);
+  }
 }

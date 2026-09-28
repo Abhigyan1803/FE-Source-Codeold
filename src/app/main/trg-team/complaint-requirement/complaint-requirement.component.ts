@@ -67,7 +67,7 @@ console.log(res,"=================");
   }
   
   addComplaints() {
-    this.router.navigate(['/main/trg-team/it/add-complaints']);
+    this.router.navigate(['/main/trg-team/complaint/add-complaints']);
   }
 
   noImg(e) {
@@ -85,12 +85,12 @@ console.log(res,"=================");
   }
 
   viewComplaints(element) {
-    this.router.navigate(['/main/trg-team/it/view-complaints'],{queryParams:{id:element.id}})  
+    this.router.navigate(['/main/trg-team/complaint/view-complaints'],{queryParams:{id:element.id}})  
 
     if(this.router.url.includes('main/GS-Branch'))
-    this.router.navigate(['/main/trg-team/it/view-complaints'],{queryParams:{id:element.id}})
+    this.router.navigate(['/main/trg-team/complaint/view-complaints'],{queryParams:{id:element.id}})
     if(this.router.url.includes('main/admin'))
-    this.router.navigate(['/main/trg-team/it/view-complaints'],{queryParams:{id:element.id}})  
+    this.router.navigate(['/main/trg-team/complaint/view-complaints'],{queryParams:{id:element.id}})  
   }
 
 

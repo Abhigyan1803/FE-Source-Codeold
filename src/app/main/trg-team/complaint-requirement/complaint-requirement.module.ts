@@ -8,7 +8,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MaterialModule} from 'app/material/material.module';
-import { AddComplaintsComponent } from './add-complaints/add-complaints.component';
 import {complaintrequirementRoutes} from './complaint-requirement.routes'
 // const routes = [
 //     {

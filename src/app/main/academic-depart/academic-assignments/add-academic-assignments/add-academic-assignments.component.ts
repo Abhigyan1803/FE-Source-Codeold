@@ -108,7 +108,7 @@ export class AddAcademicAssignmentsComponent implements OnInit {
   //   )
   // }
   //add validation on 200mb file
-  upload1(event: any, index: number): void {
+  upload1(event: any): void {
     var file = event.target.files[0];
     if (file.size > 202428800) { 
       this.sharedService.openSnackbar('Document Should Be Maximum 200 MB in Size')

@@ -96,7 +96,7 @@ export class AddScheduleComponent implements OnInit {
   get f() {
     return this.addScheduleForm.controls;
   }
-  upload1(event: any, index: number): void {
+  upload1(event: any): void {
     this.spinner.show();
     let fileName = event.target.files[0].name;
     var file = event.target.files[0];

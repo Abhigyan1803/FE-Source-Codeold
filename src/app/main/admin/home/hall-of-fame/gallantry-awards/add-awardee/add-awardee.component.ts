@@ -28,7 +28,7 @@ export class AddAwardeeComponent implements OnInit {
   id;
 
   constructor(private fb: FormBuilder, private router: Router, private spinner: NgxSpinnerService,
-     private route: ActivatedRoute, private sharedService:SharedService,
+    private route: ActivatedRoute, public sharedService:SharedService,
     private cdref: ChangeDetectorRef, private service: AdminService, private snackbar: MatSnackBar, ) {
     this.addHallOfFameForm = this.fb.group({
 

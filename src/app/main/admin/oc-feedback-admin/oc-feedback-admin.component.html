@@ -1,0 +1,59 @@
+<div class="mat-new">
+  <h4 class="card-heading">Home <span class="sub-menu1">> Website Feedback</span></h4>
+</div>
+
+<mat-card>
+  <div class="feedback-toolbar">
+    <button mat-raised-button type="button" (click)="downloadExcel()">Download Excel</button>
+  </div>
+
+  <div *ngIf="loading">Loading feedback...</div>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</div>
+
+  <div class="table-responsive" *ngIf="!loading && responses.length">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Submitted At</th>
+          <th>Acad No</th>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Bn</th>
+          <th>Coy</th>
+          <th>Cabin No</th>
+          <th>Q1 Accommodation</th>
+          <th>Q2 VB Mess</th>
+          <th>Q3 Kapoor</th>
+          <th>Q4 Mec Gear</th>
+          <th>Q5 Ord/Web Eqpt</th>
+          <th>Q6 Bicycles</th>
+          <th>Q7 Medical</th>
+          <th>Q9 Misc</th>
+          <th>Suggestions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let f of responses">
+          <td>{{f.submittedAt | date:'dd MMM yyyy HH:mm'}}</td>
+          <td>{{f.acadNo}}</td>
+          <td>{{f.rank}}</td>
+          <td>{{f.name}}</td>
+          <td>{{f.bn}}</td>
+          <td>{{f.coy}}</td>
+          <td>{{f.cabinNo}}</td>
+          <td>{{f.furnitureIssued}} / {{f.electricalGadgets}} / {{f.electricityHotWater}} / {{f.leakageSeepage}}</td>
+          <td>{{f.messFoodQuality}} / {{f.messMenuVariety}} / {{f.messQuantity}} / {{f.messStaffBehaviour}} / {{f.messOverall}}</td>
+          <td>{{f.kapoorQuality}} / {{f.kapoorPrice}} / {{f.kapoorStitching}}</td>
+          <td>{{f.mecQuality}} / {{f.mecPrice}} / {{f.mecOverall}}</td>
+          <td>{{f.ordIssueServiceable}}</td>
+          <td>{{f.bicycleCondition}} / {{f.bicycleMaintenance}}</td>
+          <td>{{f.medicalAccess}} / {{f.medicalBehaviour}}</td>
+          <td>{{f.bankingFacilities}} / {{f.csdStores}} / {{f.csdBillingCounters}}</td>
+          <td>{{f.suggestion1}}<br>{{f.suggestion2}}<br>{{f.suggestion3}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="!loading && !responses.length">No feedback submissions found.</div>
+</mat-card>

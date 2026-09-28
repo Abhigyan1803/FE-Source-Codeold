@@ -1,0 +1,82 @@
+<div class="mat-new feedback-page">
+  <h4 class="card-heading">ADM BR, IMA <span class="sub-menu1">> OCs FEEDBACK FORM : {{termYear}}</span></h4>
+</div>
+
+<mat-card>
+  <form [formGroup]="feedbackForm" (ngSubmit)="submit()">
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label>Acad No <span class="required">*</span></label>
+        <input class="form-control" formControlName="acadNo" readonly>
+      </div>
+      <div class="form-group col-md-4">
+        <label>Rank <span class="required">*</span></label>
+        <input class="form-control" formControlName="rank" readonly>
+      </div>
+      <div class="form-group col-md-4">
+        <label>Date</label>
+        <input class="form-control" [value]="displayDate | date:'dd MMM yyyy'" readonly>
+      </div>
+      <div class="form-group col-md-4">
+        <label>Name</label>
+        <input class="form-control" [value]="cadet.name || ''" readonly>
+      </div>
+      <div class="form-group col-md-4">
+        <label>Bn</label>
+        <input class="form-control" [value]="cadet.battalian?.shortName || cadet.battalian?.name || cadet.battalian || ''" readonly>
+      </div>
+      <div class="form-group col-md-4">
+        <label>Coy</label>
+        <input class="form-control" [value]="cadet.company || ''" readonly>
+      </div>
+      <div class="form-group col-md-4">
+        <label>Cabin No <span class="required">*</span></label>
+        <input class="form-control" formControlName="cabinNo">
+      </div>
+    </div>
+
+    <hr>
+
+    <div *ngFor="let q of questions" class="feedback-row">
+      <div *ngIf="q.section" class="section-title">{{q.section}}</div>
+      <div class="question"><span class="question-number">{{q.number}}</span> {{q.label}}</div>
+      <mat-radio-group *ngIf="q.type === 'rating'" [formControlName]="q.key" class="rating-group">
+        <mat-radio-button *ngFor="let rating of ratings" [value]="rating.value" [attr.aria-label]="rating.label">
+          {{rating.label}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <mat-radio-group *ngIf="q.type === 'yesNo'" [formControlName]="q.key" class="rating-group">
+        <mat-radio-button value="Yes">Yes</mat-radio-button>
+        <mat-radio-button value="No">No</mat-radio-button>
+      </mat-radio-group>
+      <mat-radio-group *ngIf="q.type === 'banking'" [formControlName]="q.key" class="rating-group">
+        <mat-radio-button *ngFor="let option of bankingOptions" [value]="option">{{option}}</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="section-title">Q12. Please give your suggestions for further improvement in administrative aspects of the functioning of the Academy (not more than 30 words):</div>
+    <div class="form-group">
+      <label>12.1</label>
+      <textarea class="form-control" rows="2" maxlength="1000" formControlName="suggestion1"></textarea>
+    </div>
+    <div class="form-group">
+      <label>12.2</label>
+      <textarea class="form-control" rows="2" maxlength="1000" formControlName="suggestion2"></textarea>
+    </div>
+    <div class="form-group">
+      <label>12.3</label>
+      <textarea class="form-control" rows="2" maxlength="1000" formControlName="suggestion3"></textarea>
+    </div>
+
+    <div class="form-group confirmation">
+      <mat-checkbox formControlName="confirmation">
+        I confirm the above responses are accurate and given by me.
+      </mat-checkbox>
+    </div>
+
+    <div *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</div>
+    <div *ngIf="successMessage" class="alert alert-success">{{successMessage}}</div>
+
+    <button mat-raised-button type="submit" [disabled]="submitting">Submit Feedback</button>
+  </form>
+</mat-card>

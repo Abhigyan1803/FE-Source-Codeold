@@ -37,7 +37,7 @@ export class AddProphylacticPoliciesComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router,
     private adminservice: AdminService, private cdref:ChangeDetectorRef,
-    private activeRoute: ActivatedRoute, private sharedService: SharedService) {
+    private activeRoute: ActivatedRoute, public sharedService: SharedService) {
     this.addPoliciesForm = this.fb.group({
       name: ['', Validators.required],
       description: ['', Validators.required],

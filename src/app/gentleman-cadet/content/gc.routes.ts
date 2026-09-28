@@ -39,4 +39,5 @@ export const GC_ROUTES: Routes = [
     { path: 'academic-syllabus', loadChildren: () => import('./academic-syllabus/academic-syllabus.module').then(m => m.AcademicSyllabusModule) },
     { path: 'punishments', loadChildren: () => import('./punishments/punishments.module').then(m => m.PunishmentsModule) },
     { path: 'adjutant-orders', loadChildren: () => import('./adjutant-orders/adjutant-orders.module').then(m => m.AdjutantOrdersModule) },
+    { path: 'feedback', loadChildren: () => import('./oc-feedback/oc-feedback.module').then(m => m.OcFeedbackModule) },
 ];

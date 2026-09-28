@@ -28,6 +28,11 @@ const AdminMenus = [
     // icon: ''
   },
   {
+    state: 'main/admin/oc-feedback',
+    name: 'Website Feedback',
+    type: 'link',
+  },
+  {
     state: 'main/admin/user-access',
     name: 'User Access',
     type: 'sub',

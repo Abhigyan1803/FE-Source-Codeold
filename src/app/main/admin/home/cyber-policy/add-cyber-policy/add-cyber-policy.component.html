@@ -2,7 +2,7 @@
     <h4 class="card-heading">
         <button mat-icon-button (click)="goBack()">
             <mat-icon>chevron_left</mat-icon>
-        </button> Home <span class="sub-menu1">> Cyber Policy > {{pTitle}}</span>
+        </button> Home <span class="sub-menu1">> E-Books > {{pTitle}}</span>
     </h4>
 </div>
 <mat-card>
@@ -43,8 +43,8 @@
             </div>
 
 
-            <button mat-raised-button *ngIf="!id" (click)="addCyberPolicy()">Add Cyber Policy</button>
-            <button mat-raised-button *ngIf="id" (click)="updateCyberPolicy()">Update Cyber Policy</button>
+            <button mat-raised-button *ngIf="!id" (click)="addCyberPolicy()">Add E-Books</button>
+            <button mat-raised-button *ngIf="id" (click)="updateCyberPolicy()">Update E-Books</button>
 
         </form>
 

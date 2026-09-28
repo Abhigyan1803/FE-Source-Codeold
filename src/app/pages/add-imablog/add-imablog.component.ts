@@ -37,7 +37,7 @@ export class AddImablogComponent implements OnInit {
   otherCategory: boolean = false;
 
   blogCategory: any[] = ['Lifestyle', 'Fitness', 'Sports', 'Warfare', 'Entertainment', 'Arts',
-    'Historical', 'Others'];
+    'Historical', 'Cartoons/Caricatures', 'Others'];
   userDetails
   bid
   constructor(private fb: FormBuilder, private router: Router, private spinner: NgxSpinnerService, private authService: AuthService, private dialog: MatDialog

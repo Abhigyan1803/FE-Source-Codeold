@@ -1,0 +1,1055 @@
+diff --git a/src/app/core/menu/menu-items/menu-items.ts b/src/app/core/menu/menu-items/menu-items.ts
+index 514bbc3..b168ed1 100644
+--- a/src/app/core/menu/menu-items/menu-items.ts
++++ b/src/app/core/menu/menu-items/menu-items.ts
+@@ -55,7 +55,7 @@ const AdminMenus = [
+       { state: 'greybook', name: 'Greybook', type: 'link' },
+       { state: 'central-library-management', name: 'Central Library', type: 'link' },
+       { state: 'ebook', name: 'E-Book', type: 'link' },
+-      { state: 'cyber-policy', name: 'Cyber Policy', type: 'link' },
++      { state: 'cyber-policy', name: 'E-Books', type: 'link' },
+       { state: 'book-list', name: 'IMA Recommended Reading List', type: 'link' },
+       { state: 'announcement', name: 'Announcements', type: 'link' },
+       // { state: 'social-list', name: 'Social List', type: 'link' },
+@@ -67,7 +67,7 @@ const AdminMenus = [
+           { state: 'gallantry-awardees', name: 'Gallantry Awardees', type: 'link' },
+         ]
+       },
+-      { state: 'ima-blog', name: 'IMA Blog', type: 'link' },
++      { state: 'ima-blog', name: 'Creative Corner', type: 'link' },
+ 
+     ]
+   },
+@@ -1233,7 +1233,7 @@ const TRG_TEAM_MENU = [
+   {
+     id: 'common',
+     state: 'main/trg-team/ima-blog',
+-    name: 'IMA Blog',
++    name: 'Creative Corner',
+     type: 'link',
+     // icon: ''
+   },
+@@ -1270,7 +1270,7 @@ const TRG_TEAM_MENU = [
+       { state: 'activity', name: 'IMA Activities', type: 'link' },
+       { state: 'greybook', name: 'Greybook', type: 'link' },
+       { state: 'central-library-management', name: 'Central Library', type: 'link' },
+-      { state: 'cyber-policy', name: 'Cyber Policy', type: 'link' },
++      { state: 'cyber-policy', name: 'E-Books', type: 'link' },
+       { state: 'book-list', name: 'IMA Recommended Reading List', type: 'link' },
+       { state: 'announcement', name: 'Announcements', type: 'link' },
+       // { state: 'social-list', name: 'Social List', type: 'link' },
+@@ -1450,7 +1450,7 @@ const TRGBattalionMenus = [
+   {
+     id: 22,
+     state: 'main/trg-battalion/parade-state',
+-    name: 'Parade State of GCs',
++    name: 'Parade State of OCs',
+     type: 'link',
+   },
+   {
+@@ -1462,7 +1462,7 @@ const TRGBattalionMenus = [
+   {
+     id: 'common',
+     state: 'main/trg-battalion/ima-blog',
+-    name: 'IMA Blog',
++    name: 'Creative Corner',
+     type: 'link',
+     // icon: ''
+   },
+@@ -1528,7 +1528,7 @@ const ADJUTANT_MENU = [
+     name: 'General Instruction',
+     type: 'sub',
+     children: [
+-      { state: 'reception', name: 'Reception of new GCs', type: 'link' },
++      { state: 'reception', name: 'Reception of new OCs', type: 'link' },
+       { state: 'pop', name: 'POP', type: 'link' },
+       { state: 'sop', name: 'SOPs', type: 'link' },
+       // {
+@@ -1819,7 +1819,7 @@ const ADJUTANT_MENU = [
+       { state: 'activity', name: 'IMA Activities', type: 'link' },
+       { state: 'greybook', name: 'Greybook', type: 'link' },
+       { state: 'central-library-management', name: 'Central Library', type: 'link' },
+-      { state: 'cyber-policy', name: 'Cyber Policy', type: 'link' },
++      { state: 'cyber-policy', name: 'E-Books', type: 'link' },
+       { state: 'book-list', name: 'IMA Recommended Reading List', type: 'link' },
+       { state: 'announcement', name: 'Announcements', type: 'link' },
+       // { state: 'social-list', name: 'Social List', type: 'link' },
+@@ -1865,7 +1865,7 @@ const ADJUTANT_MENU = [
+   {
+     id: 'common',
+     state: 'main/adjutant-branch/ima-blog',
+-    name: 'IMA Blog',
++    name: 'Creative Corner',
+     type: 'link',
+     // icon: ''
+   },
+@@ -1915,7 +1915,7 @@ const GS_BRANCH_MENUS = [
+       { state: 'activity', name: 'IMA Activities', type: 'link' },
+       { state: 'greybook', name: 'Greybook', type: 'link' },
+       { state: 'central-library-management', name: 'Central Library', type: 'link' },
+-      { state: 'cyber-policy', name: 'Cyber Policy', type: 'link' },
++      { state: 'cyber-policy', name: 'E-Books', type: 'link' },
+       { state: 'book-list', name: 'IMA Recommended Reading List', type: 'link' },
+       { state: 'announcement', name: 'Announcements', type: 'link' },
+       // { state: 'social-list', name: 'Social List', type: 'link' },
+@@ -1927,7 +1927,7 @@ const GS_BRANCH_MENUS = [
+           { state: 'gallantry-awardees', name: 'Gallantry Awardees', type: 'link' },
+         ]
+       },
+-      { state: 'ima-blog', name: 'IMA Blog', type: 'link' },
++      { state: 'ima-blog', name: 'Creative Corner', type: 'link' },
+ 
+     ]
+   },
+@@ -2078,7 +2078,7 @@ const GS_BRANCH_MENUS = [
+   {
+     id: 'common',
+     state: 'main/gs-branch/ima-blog',
+-    name: 'IMA Blog',
++    name: 'Creative Corner',
+     type: 'link',
+     // icon: ''
+   },
+@@ -3193,7 +3193,7 @@ const ACADEMIC_DEPARTMENT = [
+   {
+     id: 'common',
+     state: 'main/academic-depart/ima-blog',
+-    name: 'IMA Blog',
++    name: 'Creative Corner',
+     type: 'link',
+     // icon: ''
+   },
+diff --git a/src/app/gentleman-cadet/gentleman-cadet.component.html b/src/app/gentleman-cadet/gentleman-cadet.component.html
+index 2effcb8..fcb6ba7 100644
+--- a/src/app/gentleman-cadet/gentleman-cadet.component.html
++++ b/src/app/gentleman-cadet/gentleman-cadet.component.html
+@@ -61,7 +61,7 @@
+                                     </div>
+                                     <div class="cadet-name" >
+                                         <h5>
+-                                        {{cadetDetails.name || "Gentleman Cadet"}} 
++                                        {{cadetDetails.name || "Officer Cadet"}} 
+ 
+                                         </h5>
+                                         <!-- <i class="fa fa-chevron-down"></i>                                      -->
+@@ -234,7 +234,7 @@
+ 
+                 </li>
+                 <li class="commomn" routerLinkActive="active-menu">
+-                    <a href="javascript:;" [routerLink]="['/gc/content/ima-blog']">IMA Blogs</a>
++                    <a href="javascript:;" [routerLink]="['/gc/content/ima-blog']">Creative Corner</a>
+                 </li>
+                 <li class="commomn" routerLinkActive="active-menu">
+                     <a href="javascript:;">Clubs <i class="fa fa-chevron-down"></i> </a>
+diff --git a/src/app/main/adjutant-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html b/src/app/main/adjutant-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html
+index 86db3ee..d81e84d 100644
+--- a/src/app/main/adjutant-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html
++++ b/src/app/main/adjutant-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html
+@@ -2,7 +2,7 @@
+     <h4 class="card-heading">
+         <button mat-icon-button (click)="goBack()">
+             <mat-icon>chevron_left</mat-icon>
+-        </button> Home <span class="sub-menu1">> Cyber Policy > {{pTitle}}</span>
++        </button> Home <span class="sub-menu1">> E-Books > {{pTitle}}</span>
+     </h4>
+ </div>
+ <mat-card>
+@@ -43,8 +43,8 @@
+             </div>
+ 
+ 
+-            <button mat-raised-button *ngIf="!id" (click)="addCyberPolicy()">Add Cyber Policy</button>
+-            <button mat-raised-button *ngIf="id" (click)="updateCyberPolicy()">Update Cyber Policy</button>
++            <button mat-raised-button *ngIf="!id" (click)="addCyberPolicy()">Add E-Books</button>
++            <button mat-raised-button *ngIf="id" (click)="updateCyberPolicy()">Update E-Books</button>
+ 
+         </form>
+ 
+diff --git a/src/app/main/adjutant-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts b/src/app/main/adjutant-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts
+index 9381339..bd5df48 100644
+--- a/src/app/main/adjutant-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts
++++ b/src/app/main/adjutant-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts
+@@ -16,7 +16,7 @@ export class AddCyberPolicyComponent implements OnInit {
+ 
+ 
+   id;
+-  pTitle = "Add Cyber Policy";
++  pTitle = "Add E-Books";
+   
+   @ViewChild('file', { static: true }) docFile;
+   unSelectedFile;
+@@ -38,7 +38,7 @@ export class AddCyberPolicyComponent implements OnInit {
+ 
+   ngOnInit(): void {
+     if (this.router.url.includes('view-cyber-policy')) {
+-      this.pTitle = 'View Cyber Policy'
++      this.pTitle = 'View E-Books'
+       this.id = this.route.snapshot.queryParamMap.get('id')
+       // console.log(this.id);
+       this.service.getCyberPolicyById(this.id).subscribe(
+diff --git a/src/app/main/adjutant-branch/home/cyber-policy/cyber-policy.component.html b/src/app/main/adjutant-branch/home/cyber-policy/cyber-policy.component.html
+index 4935846..ed235a0 100644
+--- a/src/app/main/adjutant-branch/home/cyber-policy/cyber-policy.component.html
++++ b/src/app/main/adjutant-branch/home/cyber-policy/cyber-policy.component.html
+@@ -1,5 +1,5 @@
+ <div class="mat-new">
+-    <h4 class="card-heading"> Home <span class="sub-menu1">> Cyber Policy</span> </h4>
++    <h4 class="card-heading"> Home <span class="sub-menu1">> E-Books</span> </h4>
+ 
+ </div>
+ 
+diff --git a/src/app/main/adjutant-branch/home/cyber-policy/cyber-policy.component.ts b/src/app/main/adjutant-branch/home/cyber-policy/cyber-policy.component.ts
+index da208b5..3eeae6b 100644
+--- a/src/app/main/adjutant-branch/home/cyber-policy/cyber-policy.component.ts
++++ b/src/app/main/adjutant-branch/home/cyber-policy/cyber-policy.component.ts
+@@ -117,7 +117,7 @@ export class CyberPolicyComponent implements OnInit {
+     this.dialog.open(DialogComponent , {
+       width: '1300px', height: '650px',
+       data: {
+-        type: 'document', title:'Cyber Policy' , url: c.link
++        type: 'document', title:'E-Books' , url: c.link
+       }
+     });
+   }
+diff --git a/src/app/main/adjutant-branch/home/events/add-event/add-event.component.html b/src/app/main/adjutant-branch/home/events/add-event/add-event.component.html
+index 9ccd08f..eabb3c3 100644
+--- a/src/app/main/adjutant-branch/home/events/add-event/add-event.component.html
++++ b/src/app/main/adjutant-branch/home/events/add-event/add-event.component.html
+@@ -58,7 +58,7 @@
+       
+       <div class="row">
+         <div class="form-group col-md-12">
+-         <label for="isGcEvent">  <input type="checkbox" formControlName="isGcEvent" name="" id="isGcEvent"> Is for Gentleman Cadet </label> 
++         <label for="isGcEvent">  <input type="checkbox" formControlName="isGcEvent" name="" id="isGcEvent"> Is for Officer Cadet </label> 
+          </div>
+       </div>
+       
+diff --git a/src/app/main/adjutant-branch/home/ima-blogs/add-blog/add-blog.component.html b/src/app/main/adjutant-branch/home/ima-blogs/add-blog/add-blog.component.html
+index bb2d5d9..5d5228b 100644
+--- a/src/app/main/adjutant-branch/home/ima-blogs/add-blog/add-blog.component.html
++++ b/src/app/main/adjutant-branch/home/ima-blogs/add-blog/add-blog.component.html
+@@ -2,7 +2,7 @@
+     <h4 class="card-heading">
+         <button mat-icon-button (click)="goBack()">
+             <mat-icon>chevron_left</mat-icon>
+-        </button>  IMA Blog<span class="sub-menu1"> > {{pageName}} </span> <span class="sub-menu1">
++        </button>  Creative Corner<span class="sub-menu1"> > {{pageName}} </span> <span class="sub-menu1">
+             </span>
+     </h4>
+ </div>
+@@ -16,7 +16,7 @@
+                     <label for="title">Title <span class="required">*</span></label>
+                     <input type="text" id="title" class="form-control" maxlength="100" 
+                     [disabled]="disableForm"
+-                    placeholder="IMA Blog Title" required formControlName="title">
++                    placeholder="Creative Corner Title" required formControlName="title">
+                     <span class="validation_msg" *ngIf="f.title.errors && isError">Please Enter Title</span>
+                 </div>
+ 
+@@ -24,7 +24,7 @@
+                     <label for="category">Category <span class="required">*</span></label>
+                     <select #categorySelector id="category" class="form-control" (change)="categorySelected($event.target.value)"
+                     [attr.disabled]="disableForm ? 'disabled' : null" 
+-                     placeholder="IMA Blog Category" >
++                     placeholder="Creative Corner Category" >
+                         <option value="" selected hidden disabled>Select</option>
+                         <option *ngFor="let c of blogCategory" [value]="c">{{c}} </option>
+                     </select>
+@@ -33,7 +33,7 @@
+ 
+                 <div class="form-group col-md-6" *ngIf="otherCategory" >
+                     <label for="category">Category Name<span class="required">*</span></label>
+-                    <input type="text" id="category" class="form-control" maxlength="100" placeholder="IMA Blog Category" required
++                    <input type="text" id="category" class="form-control" maxlength="100" placeholder="Creative Corner Category" required
+                     [disabled]="disableForm" formControlName="category">
+                     <span class="validation_msg" *ngIf="f.category.errors && isError">Please Enter Category</span>
+                 </div>
+@@ -58,7 +58,7 @@
+ 
+             <div class="row">
+                 <div class="form-group col-md-12">
+-                    <label for="title">Write Your Blog 
++                    <label for="title">Write your mind 
+                         <!-- <span class="char-count"> ({{descLength}}/3000) </span>  -->
+                         <span
+                             class="required">*</span></label>
+diff --git a/src/app/main/adjutant-branch/home/ima-blogs/add-blog/add-blog.component.ts b/src/app/main/adjutant-branch/home/ima-blogs/add-blog/add-blog.component.ts
+index dfae903..23b3d5e 100644
+--- a/src/app/main/adjutant-branch/home/ima-blogs/add-blog/add-blog.component.ts
++++ b/src/app/main/adjutant-branch/home/ima-blogs/add-blog/add-blog.component.ts
+@@ -36,7 +36,7 @@ export class AddBlogComponent implements OnInit {
+   otherCategory: boolean = false;
+ 
+   blogCategory: any[] = ['Lifestyle', 'Fitness', 'Sports', 'Warfare', 'Entertainment', 'Arts',
+-    'Historical', 'Others'];
++    'Historical', 'Cartoons/Caricatures', 'Others'];
+ 
+   constructor(private fb: FormBuilder, private router: Router, private spinner: NgxSpinnerService, private authService: AuthService, private dialog:MatDialog
+     ,private route: ActivatedRoute, private cdref: ChangeDetectorRef, private service: AdminService, private sharedService: SharedService) {
+diff --git a/src/app/main/adjutant-branch/home/ima-blogs/ima-blogs.component.html b/src/app/main/adjutant-branch/home/ima-blogs/ima-blogs.component.html
+index 3b923a6..b927833 100644
+--- a/src/app/main/adjutant-branch/home/ima-blogs/ima-blogs.component.html
++++ b/src/app/main/adjutant-branch/home/ima-blogs/ima-blogs.component.html
+@@ -1,5 +1,5 @@
+ <div class="mat-new">
+-    <h4 class="card-heading"> IMA Blogs <span class="sub-menu1"></span> </h4>
++    <h4 class="card-heading"> Creative Corner <span class="sub-menu1"></span> </h4>
+ 
+ </div>
+ 
+diff --git a/src/app/main/admin/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html b/src/app/main/admin/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html
+index 92d8d98..81ea853 100644
+--- a/src/app/main/admin/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html
++++ b/src/app/main/admin/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html
+@@ -2,7 +2,7 @@
+     <h4 class="card-heading">
+         <button mat-icon-button (click)="goBack()">
+             <mat-icon>chevron_left</mat-icon>
+-        </button> Home <span class="sub-menu1">> Cyber Policy > {{pTitle}}</span>
++        </button> Home <span class="sub-menu1">> E-Books > {{pTitle}}</span>
+     </h4>
+ </div>
+ <mat-card>
+@@ -43,8 +43,8 @@
+             </div>
+ 
+ 
+-            <button mat-raised-button *ngIf="!id" (click)="addCyberPolicy()">Add Cyber Policy</button>
+-            <button mat-raised-button *ngIf="id" (click)="updateCyberPolicy()">Update Cyber Policy</button>
++            <button mat-raised-button *ngIf="!id" (click)="addCyberPolicy()">Add E-Books</button>
++            <button mat-raised-button *ngIf="id" (click)="updateCyberPolicy()">Update E-Books</button>
+ 
+         </form>
+ 
+diff --git a/src/app/main/admin/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts b/src/app/main/admin/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts
+index c1b9c24..4790913 100644
+--- a/src/app/main/admin/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts
++++ b/src/app/main/admin/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts
+@@ -16,7 +16,7 @@ export class AddCyberPolicyComponent implements OnInit {
+ 
+ 
+   id;
+-  pTitle = "Add Cyber Policy";
++  pTitle = "Add E-Books";
+   
+   @ViewChild('file', { static: true }) docFile;
+   unSelectedFile;
+@@ -38,7 +38,7 @@ export class AddCyberPolicyComponent implements OnInit {
+ 
+   ngOnInit(): void {
+     if (this.router.url.includes('view-cyber-policy')) {
+-      this.pTitle = 'View Cyber Policy'
++      this.pTitle = 'View E-Books'
+       this.id = this.route.snapshot.queryParamMap.get('id')
+       // console.log(this.id);
+       this.service.getCyberPolicyById(this.id).subscribe(
+diff --git a/src/app/main/admin/home/cyber-policy/cyber-policy.component.html b/src/app/main/admin/home/cyber-policy/cyber-policy.component.html
+index 4935846..ed235a0 100644
+--- a/src/app/main/admin/home/cyber-policy/cyber-policy.component.html
++++ b/src/app/main/admin/home/cyber-policy/cyber-policy.component.html
+@@ -1,5 +1,5 @@
+ <div class="mat-new">
+-    <h4 class="card-heading"> Home <span class="sub-menu1">> Cyber Policy</span> </h4>
++    <h4 class="card-heading"> Home <span class="sub-menu1">> E-Books</span> </h4>
+ 
+ </div>
+ 
+diff --git a/src/app/main/admin/home/cyber-policy/cyber-policy.component.ts b/src/app/main/admin/home/cyber-policy/cyber-policy.component.ts
+index da208b5..3eeae6b 100644
+--- a/src/app/main/admin/home/cyber-policy/cyber-policy.component.ts
++++ b/src/app/main/admin/home/cyber-policy/cyber-policy.component.ts
+@@ -117,7 +117,7 @@ export class CyberPolicyComponent implements OnInit {
+     this.dialog.open(DialogComponent , {
+       width: '1300px', height: '650px',
+       data: {
+-        type: 'document', title:'Cyber Policy' , url: c.link
++        type: 'document', title:'E-Books' , url: c.link
+       }
+     });
+   }
+diff --git a/src/app/main/admin/home/events/add-event/add-event.component.html b/src/app/main/admin/home/events/add-event/add-event.component.html
+index ba07f00..0e0332b 100644
+--- a/src/app/main/admin/home/events/add-event/add-event.component.html
++++ b/src/app/main/admin/home/events/add-event/add-event.component.html
+@@ -58,7 +58,7 @@
+       
+       <div class="row">
+         <div class="form-group col-md-12">
+-         <label for="isGcEvent">  <input type="checkbox" formControlName="isGcEvent" name="" id="isGcEvent"> Is for Gentleman Cadet </label> 
++         <label for="isGcEvent">  <input type="checkbox" formControlName="isGcEvent" name="" id="isGcEvent"> Is for Officer Cadet </label> 
+          </div>
+       </div>
+       
+diff --git a/src/app/main/admin/home/ima-blogs/add-blog/add-blog.component.html b/src/app/main/admin/home/ima-blogs/add-blog/add-blog.component.html
+index bc3a70e..4d693ae 100644
+--- a/src/app/main/admin/home/ima-blogs/add-blog/add-blog.component.html
++++ b/src/app/main/admin/home/ima-blogs/add-blog/add-blog.component.html
+@@ -2,7 +2,7 @@
+     <h4 class="card-heading">
+         <button mat-icon-button (click)="goBack()">
+             <mat-icon>chevron_left</mat-icon>
+-        </button>  IMA Blog<span class="sub-menu1"> > {{pageName}} </span> <span class="sub-menu1">
++        </button>  Creative Corner<span class="sub-menu1"> > {{pageName}} </span> <span class="sub-menu1">
+             </span>
+     </h4>
+ </div>
+@@ -16,7 +16,7 @@
+                     <label for="title">Title <span class="required">*</span></label>
+                     <input type="text" id="title" class="form-control" maxlength="100" 
+                     [disabled]="disableForm"
+-                    placeholder="IMA Blog Title" required formControlName="title">
++                    placeholder="Creative Corner Title" required formControlName="title">
+                     <span class="validation_msg" *ngIf="f.title.errors && isError">Please Enter Title</span>
+                 </div>
+ 
+@@ -24,7 +24,7 @@
+                     <label for="category">Category <span class="required">*</span></label>
+                     <select #categorySelector id="category" class="form-control" (change)="categorySelected($event.target.value)"
+                     [attr.disabled]="disableForm ? 'disabled' : null" 
+-                     placeholder="IMA Blog Category" >
++                     placeholder="Creative Corner Category" >
+                         <option value="" selected hidden disabled>Select</option>
+                         <option *ngFor="let c of blogCategory" [value]="c">{{c}} </option>
+                     </select>
+@@ -33,7 +33,7 @@
+ 
+                 <div class="form-group col-md-6" *ngIf="otherCategory" >
+                     <label for="category">Category Name<span class="required">*</span></label>
+-                    <input type="text" id="category" class="form-control" maxlength="100" placeholder="IMA Blog Category" required
++                    <input type="text" id="category" class="form-control" maxlength="100" placeholder="Creative Corner Category" required
+                     [disabled]="disableForm" formControlName="category">
+                     <span class="validation_msg" *ngIf="f.category.errors && isError">Please Enter Category</span>
+                 </div>
+@@ -58,7 +58,7 @@
+ 
+             <div class="row">
+                 <div class="form-group col-md-12">
+-                    <label for="title">Write Your Blog 
++                    <label for="title">Write your mind 
+                         <!-- <span class="char-count"> ({{descLength}}/3000) </span>  -->
+                         <span
+                             class="required">*</span></label>
+diff --git a/src/app/main/admin/home/ima-blogs/add-blog/add-blog.component.ts b/src/app/main/admin/home/ima-blogs/add-blog/add-blog.component.ts
+index 8a66fa0..1abe9ad 100644
+--- a/src/app/main/admin/home/ima-blogs/add-blog/add-blog.component.ts
++++ b/src/app/main/admin/home/ima-blogs/add-blog/add-blog.component.ts
+@@ -38,7 +38,7 @@ export class AddBlogComponent implements OnInit {
+   otherCategory: boolean = false;
+ 
+   blogCategory: any[] = ['Lifestyle', 'Fitness', 'Sports', 'Warfare', 'Entertainment', 'Arts',
+-    'Historical', 'Others'];
++    'Historical', 'Cartoons/Caricatures', 'Others'];
+     userDetails
+     bnId
+     bid
+diff --git a/src/app/main/admin/home/ima-blogs/ima-blogs.component.html b/src/app/main/admin/home/ima-blogs/ima-blogs.component.html
+index 2cd228c..c385267 100644
+--- a/src/app/main/admin/home/ima-blogs/ima-blogs.component.html
++++ b/src/app/main/admin/home/ima-blogs/ima-blogs.component.html
+@@ -1,5 +1,5 @@
+ <div class="mat-new">
+-    <h4 class="card-heading"> IMA Blogs <span class="sub-menu1"></span> </h4>
++    <h4 class="card-heading"> Creative Corner <span class="sub-menu1"></span> </h4>
+ 
+ </div>
+ 
+diff --git a/src/app/main/admin/trg-battalion-management/gc-activities/add-gc-activities/add-gc-activities.component.html b/src/app/main/admin/trg-battalion-management/gc-activities/add-gc-activities/add-gc-activities.component.html
+index 3318515..0704fa2 100644
+--- a/src/app/main/admin/trg-battalion-management/gc-activities/add-gc-activities/add-gc-activities.component.html
++++ b/src/app/main/admin/trg-battalion-management/gc-activities/add-gc-activities/add-gc-activities.component.html
+@@ -1,5 +1,5 @@
+ <div class="mat-new">
+-  <h4 class="card-heading"> <button mat-icon-button (click)="goBack()"> <mat-icon>chevron_left</mat-icon> </button> TRG Battalion <span class="sub-menu1"> > Add Gc Activities </span> <span class="sub-menu1"> > {{pageTitle}}</span> </h4>
++  <h4 class="card-heading"> <button mat-icon-button (click)="goBack()"> <mat-icon>chevron_left</mat-icon> </button> TRG Battalion <span class="sub-menu1"> > Add OC Activities </span> <span class="sub-menu1"> > {{pageTitle}}</span> </h4>
+ </div>
+ 
+ <mat-card>
+diff --git a/src/app/main/gs-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html b/src/app/main/gs-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html
+index ded9e02..215d29e 100644
+--- a/src/app/main/gs-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html
++++ b/src/app/main/gs-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html
+@@ -2,7 +2,7 @@
+     <h4 class="card-heading">
+         <button mat-icon-button (click)="goBack()">
+             <mat-icon>chevron_left</mat-icon>
+-        </button> Home <span class="sub-menu1">> Cyber Policy > {{pTitle}}</span>
++        </button> Home <span class="sub-menu1">> E-Books > {{pTitle}}</span>
+     </h4>
+ </div>
+ <mat-card>
+@@ -43,8 +43,8 @@
+             </div>
+ 
+ 
+-            <button mat-raised-button *ngIf="!id" (click)="addCyberPolicy()">Add Cyber Policy</button>
+-            <button mat-raised-button *ngIf="id" (click)="updateCyberPolicy()">Update Cyber Policy</button>
++            <button mat-raised-button *ngIf="!id" (click)="addCyberPolicy()">Add E-Books</button>
++            <button mat-raised-button *ngIf="id" (click)="updateCyberPolicy()">Update E-Books</button>
+ 
+         </form>
+ 
+diff --git a/src/app/main/gs-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts b/src/app/main/gs-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts
+index 160249a..01c604e 100644
+--- a/src/app/main/gs-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts
++++ b/src/app/main/gs-branch/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts
+@@ -15,7 +15,7 @@ export class AddCyberPolicyComponent implements OnInit {
+ 
+ 
+   id;
+-  pTitle = "Add Cyber Policy";
++  pTitle = "Add E-Books";
+   
+   @ViewChild('file', { static: true }) docFile;
+   unSelectedFile;
+@@ -37,7 +37,7 @@ export class AddCyberPolicyComponent implements OnInit {
+ 
+   ngOnInit(): void {
+     if (this.router.url.includes('view-cyber-policy')) {
+-      this.pTitle = 'View Cyber Policy'
++      this.pTitle = 'View E-Books'
+       this.id = this.route.snapshot.queryParamMap.get('id')
+       // console.log(this.id);
+       this.service.getCyberPolicyById(this.id).subscribe(
+diff --git a/src/app/main/gs-branch/home/cyber-policy/cyber-policy.component.html b/src/app/main/gs-branch/home/cyber-policy/cyber-policy.component.html
+index 4935846..ed235a0 100644
+--- a/src/app/main/gs-branch/home/cyber-policy/cyber-policy.component.html
++++ b/src/app/main/gs-branch/home/cyber-policy/cyber-policy.component.html
+@@ -1,5 +1,5 @@
+ <div class="mat-new">
+-    <h4 class="card-heading"> Home <span class="sub-menu1">> Cyber Policy</span> </h4>
++    <h4 class="card-heading"> Home <span class="sub-menu1">> E-Books</span> </h4>
+ 
+ </div>
+ 
+diff --git a/src/app/main/gs-branch/home/cyber-policy/cyber-policy.component.ts b/src/app/main/gs-branch/home/cyber-policy/cyber-policy.component.ts
+index da208b5..3eeae6b 100644
+--- a/src/app/main/gs-branch/home/cyber-policy/cyber-policy.component.ts
++++ b/src/app/main/gs-branch/home/cyber-policy/cyber-policy.component.ts
+@@ -117,7 +117,7 @@ export class CyberPolicyComponent implements OnInit {
+     this.dialog.open(DialogComponent , {
+       width: '1300px', height: '650px',
+       data: {
+-        type: 'document', title:'Cyber Policy' , url: c.link
++        type: 'document', title:'E-Books' , url: c.link
+       }
+     });
+   }
+diff --git a/src/app/main/gs-branch/home/events/add-event/add-event.component.html b/src/app/main/gs-branch/home/events/add-event/add-event.component.html
+index 1e8b540..9d2c167 100644
+--- a/src/app/main/gs-branch/home/events/add-event/add-event.component.html
++++ b/src/app/main/gs-branch/home/events/add-event/add-event.component.html
+@@ -58,7 +58,7 @@
+       
+       <div class="row">
+         <div class="form-group col-md-12">
+-         <label for="isGcEvent">  <input type="checkbox" formControlName="isGcEvent" name="" id="isGcEvent"> Is for Gentleman Cadet </label> 
++         <label for="isGcEvent">  <input type="checkbox" formControlName="isGcEvent" name="" id="isGcEvent"> Is for Officer Cadet </label> 
+          </div>
+       </div>
+       
+diff --git a/src/app/main/gs-branch/home/ima-blogs/add-blog/add-blog.component.html b/src/app/main/gs-branch/home/ima-blogs/add-blog/add-blog.component.html
+index bb2d5d9..5d5228b 100644
+--- a/src/app/main/gs-branch/home/ima-blogs/add-blog/add-blog.component.html
++++ b/src/app/main/gs-branch/home/ima-blogs/add-blog/add-blog.component.html
+@@ -2,7 +2,7 @@
+     <h4 class="card-heading">
+         <button mat-icon-button (click)="goBack()">
+             <mat-icon>chevron_left</mat-icon>
+-        </button>  IMA Blog<span class="sub-menu1"> > {{pageName}} </span> <span class="sub-menu1">
++        </button>  Creative Corner<span class="sub-menu1"> > {{pageName}} </span> <span class="sub-menu1">
+             </span>
+     </h4>
+ </div>
+@@ -16,7 +16,7 @@
+                     <label for="title">Title <span class="required">*</span></label>
+                     <input type="text" id="title" class="form-control" maxlength="100" 
+                     [disabled]="disableForm"
+-                    placeholder="IMA Blog Title" required formControlName="title">
++                    placeholder="Creative Corner Title" required formControlName="title">
+                     <span class="validation_msg" *ngIf="f.title.errors && isError">Please Enter Title</span>
+                 </div>
+ 
+@@ -24,7 +24,7 @@
+                     <label for="category">Category <span class="required">*</span></label>
+                     <select #categorySelector id="category" class="form-control" (change)="categorySelected($event.target.value)"
+                     [attr.disabled]="disableForm ? 'disabled' : null" 
+-                     placeholder="IMA Blog Category" >
++                     placeholder="Creative Corner Category" >
+                         <option value="" selected hidden disabled>Select</option>
+                         <option *ngFor="let c of blogCategory" [value]="c">{{c}} </option>
+                     </select>
+@@ -33,7 +33,7 @@
+ 
+                 <div class="form-group col-md-6" *ngIf="otherCategory" >
+                     <label for="category">Category Name<span class="required">*</span></label>
+-                    <input type="text" id="category" class="form-control" maxlength="100" placeholder="IMA Blog Category" required
++                    <input type="text" id="category" class="form-control" maxlength="100" placeholder="Creative Corner Category" required
+                     [disabled]="disableForm" formControlName="category">
+                     <span class="validation_msg" *ngIf="f.category.errors && isError">Please Enter Category</span>
+                 </div>
+@@ -58,7 +58,7 @@
+ 
+             <div class="row">
+                 <div class="form-group col-md-12">
+-                    <label for="title">Write Your Blog 
++                    <label for="title">Write your mind 
+                         <!-- <span class="char-count"> ({{descLength}}/3000) </span>  -->
+                         <span
+                             class="required">*</span></label>
+diff --git a/src/app/main/gs-branch/home/ima-blogs/add-blog/add-blog.component.ts b/src/app/main/gs-branch/home/ima-blogs/add-blog/add-blog.component.ts
+index dfae903..23b3d5e 100644
+--- a/src/app/main/gs-branch/home/ima-blogs/add-blog/add-blog.component.ts
++++ b/src/app/main/gs-branch/home/ima-blogs/add-blog/add-blog.component.ts
+@@ -36,7 +36,7 @@ export class AddBlogComponent implements OnInit {
+   otherCategory: boolean = false;
+ 
+   blogCategory: any[] = ['Lifestyle', 'Fitness', 'Sports', 'Warfare', 'Entertainment', 'Arts',
+-    'Historical', 'Others'];
++    'Historical', 'Cartoons/Caricatures', 'Others'];
+ 
+   constructor(private fb: FormBuilder, private router: Router, private spinner: NgxSpinnerService, private authService: AuthService, private dialog:MatDialog
+     ,private route: ActivatedRoute, private cdref: ChangeDetectorRef, private service: AdminService, private sharedService: SharedService) {
+diff --git a/src/app/main/gs-branch/home/ima-blogs/ima-blogs.component.html b/src/app/main/gs-branch/home/ima-blogs/ima-blogs.component.html
+index 3b923a6..b927833 100644
+--- a/src/app/main/gs-branch/home/ima-blogs/ima-blogs.component.html
++++ b/src/app/main/gs-branch/home/ima-blogs/ima-blogs.component.html
+@@ -1,5 +1,5 @@
+ <div class="mat-new">
+-    <h4 class="card-heading"> IMA Blogs <span class="sub-menu1"></span> </h4>
++    <h4 class="card-heading"> Creative Corner <span class="sub-menu1"></span> </h4>
+ 
+ </div>
+ 
+diff --git a/src/app/main/trg-battalion/parade-state/add-parade/add-parade.component.ts b/src/app/main/trg-battalion/parade-state/add-parade/add-parade.component.ts
+index 327451e..a1b80e6 100644
+--- a/src/app/main/trg-battalion/parade-state/add-parade/add-parade.component.ts
++++ b/src/app/main/trg-battalion/parade-state/add-parade/add-parade.component.ts
+@@ -21,7 +21,7 @@ export class AddParadeComponent implements OnInit {
+   docUrl;
+   id;
+   previewImg;
+-  pTitle = "Add Pared State of GCs";
++  pTitle = "Add Pared State of OCs";
+ 
+   addParadeForm:FormGroup= new FormGroup({});
+   constructor(private fb:FormBuilder, private router:Router, private route:ActivatedRoute, private cdref:ChangeDetectorRef, private spinner:NgxSpinnerService,
+@@ -40,7 +40,7 @@ export class AddParadeComponent implements OnInit {
+     if(this.router.url.includes('view-paradestate')){
+       this.id=this.route.snapshot.queryParamMap.get('id');
+       
+-      this.pTitle = "View Pared State of GCs";
++      this.pTitle = "View Pared State of OCs";
+ 
+       this._trgBattalion.getParadeStateById(this.id).subscribe(
+         res=>{
+@@ -156,7 +156,7 @@ export class AddParadeComponent implements OnInit {
+     this.dialog.open(DialogComponent, {
+       width: '1300px', height: '650px',
+       data: {
+-        type: 'document', title:"Pared State of GCs", url: this.docUrl
++        type: 'document', title:"Pared State of OCs", url: this.docUrl
+       }
+     });
+   }
+diff --git a/src/app/main/trg-battalion/parade-state/parade-state.component.ts b/src/app/main/trg-battalion/parade-state/parade-state.component.ts
+index 6d2e406..07820fa 100644
+--- a/src/app/main/trg-battalion/parade-state/parade-state.component.ts
++++ b/src/app/main/trg-battalion/parade-state/parade-state.component.ts
+@@ -60,7 +60,7 @@ openDoc(e) {
+   this.dialog.open(DialogComponent, {
+     width: '1300px', height: '650px',
+     data: {
+-      type: 'document', title:"Pared State of GCs", url: e.document
++      type: 'document', title:"Pared State of OCs", url: e.document
+     }
+   });
+ }
+diff --git a/src/app/main/trg-team/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html b/src/app/main/trg-team/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html
+index ded9e02..215d29e 100644
+--- a/src/app/main/trg-team/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html
++++ b/src/app/main/trg-team/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.html
+@@ -2,7 +2,7 @@
+     <h4 class="card-heading">
+         <button mat-icon-button (click)="goBack()">
+             <mat-icon>chevron_left</mat-icon>
+-        </button> Home <span class="sub-menu1">> Cyber Policy > {{pTitle}}</span>
++        </button> Home <span class="sub-menu1">> E-Books > {{pTitle}}</span>
+     </h4>
+ </div>
+ <mat-card>
+@@ -43,8 +43,8 @@
+             </div>
+ 
+ 
+-            <button mat-raised-button *ngIf="!id" (click)="addCyberPolicy()">Add Cyber Policy</button>
+-            <button mat-raised-button *ngIf="id" (click)="updateCyberPolicy()">Update Cyber Policy</button>
++            <button mat-raised-button *ngIf="!id" (click)="addCyberPolicy()">Add E-Books</button>
++            <button mat-raised-button *ngIf="id" (click)="updateCyberPolicy()">Update E-Books</button>
+ 
+         </form>
+ 
+diff --git a/src/app/main/trg-team/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts b/src/app/main/trg-team/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts
+index 160249a..01c604e 100644
+--- a/src/app/main/trg-team/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts
++++ b/src/app/main/trg-team/home/cyber-policy/add-cyber-policy/add-cyber-policy.component.ts
+@@ -15,7 +15,7 @@ export class AddCyberPolicyComponent implements OnInit {
+ 
+ 
+   id;
+-  pTitle = "Add Cyber Policy";
++  pTitle = "Add E-Books";
+   
+   @ViewChild('file', { static: true }) docFile;
+   unSelectedFile;
+@@ -37,7 +37,7 @@ export class AddCyberPolicyComponent implements OnInit {
+ 
+   ngOnInit(): void {
+     if (this.router.url.includes('view-cyber-policy')) {
+-      this.pTitle = 'View Cyber Policy'
++      this.pTitle = 'View E-Books'
+       this.id = this.route.snapshot.queryParamMap.get('id')
+       // console.log(this.id);
+       this.service.getCyberPolicyById(this.id).subscribe(
+diff --git a/src/app/main/trg-team/home/cyber-policy/cyber-policy.component.html b/src/app/main/trg-team/home/cyber-policy/cyber-policy.component.html
+index 4935846..ed235a0 100644
+--- a/src/app/main/trg-team/home/cyber-policy/cyber-policy.component.html
++++ b/src/app/main/trg-team/home/cyber-policy/cyber-policy.component.html
+@@ -1,5 +1,5 @@
+ <div class="mat-new">
+-    <h4 class="card-heading"> Home <span class="sub-menu1">> Cyber Policy</span> </h4>
++    <h4 class="card-heading"> Home <span class="sub-menu1">> E-Books</span> </h4>
+ 
+ </div>
+ 
+diff --git a/src/app/main/trg-team/home/cyber-policy/cyber-policy.component.ts b/src/app/main/trg-team/home/cyber-policy/cyber-policy.component.ts
+index da208b5..3eeae6b 100644
+--- a/src/app/main/trg-team/home/cyber-policy/cyber-policy.component.ts
++++ b/src/app/main/trg-team/home/cyber-policy/cyber-policy.component.ts
+@@ -117,7 +117,7 @@ export class CyberPolicyComponent implements OnInit {
+     this.dialog.open(DialogComponent , {
+       width: '1300px', height: '650px',
+       data: {
+-        type: 'document', title:'Cyber Policy' , url: c.link
++        type: 'document', title:'E-Books' , url: c.link
+       }
+     });
+   }
+diff --git a/src/app/main/trg-team/home/events/add-event/add-event.component.html b/src/app/main/trg-team/home/events/add-event/add-event.component.html
+index 1e8b540..9d2c167 100644
+--- a/src/app/main/trg-team/home/events/add-event/add-event.component.html
++++ b/src/app/main/trg-team/home/events/add-event/add-event.component.html
+@@ -58,7 +58,7 @@
+       
+       <div class="row">
+         <div class="form-group col-md-12">
+-         <label for="isGcEvent">  <input type="checkbox" formControlName="isGcEvent" name="" id="isGcEvent"> Is for Gentleman Cadet </label> 
++         <label for="isGcEvent">  <input type="checkbox" formControlName="isGcEvent" name="" id="isGcEvent"> Is for Officer Cadet </label> 
+          </div>
+       </div>
+       
+diff --git a/src/app/main/trg-team/home/ima-blogs/add-blog/add-blog.component.html b/src/app/main/trg-team/home/ima-blogs/add-blog/add-blog.component.html
+index bb2d5d9..5d5228b 100644
+--- a/src/app/main/trg-team/home/ima-blogs/add-blog/add-blog.component.html
++++ b/src/app/main/trg-team/home/ima-blogs/add-blog/add-blog.component.html
+@@ -2,7 +2,7 @@
+     <h4 class="card-heading">
+         <button mat-icon-button (click)="goBack()">
+             <mat-icon>chevron_left</mat-icon>
+-        </button>  IMA Blog<span class="sub-menu1"> > {{pageName}} </span> <span class="sub-menu1">
++        </button>  Creative Corner<span class="sub-menu1"> > {{pageName}} </span> <span class="sub-menu1">
+             </span>
+     </h4>
+ </div>
+@@ -16,7 +16,7 @@
+                     <label for="title">Title <span class="required">*</span></label>
+                     <input type="text" id="title" class="form-control" maxlength="100" 
+                     [disabled]="disableForm"
+-                    placeholder="IMA Blog Title" required formControlName="title">
++                    placeholder="Creative Corner Title" required formControlName="title">
+                     <span class="validation_msg" *ngIf="f.title.errors && isError">Please Enter Title</span>
+                 </div>
+ 
+@@ -24,7 +24,7 @@
+                     <label for="category">Category <span class="required">*</span></label>
+                     <select #categorySelector id="category" class="form-control" (change)="categorySelected($event.target.value)"
+                     [attr.disabled]="disableForm ? 'disabled' : null" 
+-                     placeholder="IMA Blog Category" >
++                     placeholder="Creative Corner Category" >
+                         <option value="" selected hidden disabled>Select</option>
+                         <option *ngFor="let c of blogCategory" [value]="c">{{c}} </option>
+                     </select>
+@@ -33,7 +33,7 @@
+ 
+                 <div class="form-group col-md-6" *ngIf="otherCategory" >
+                     <label for="category">Category Name<span class="required">*</span></label>
+-                    <input type="text" id="category" class="form-control" maxlength="100" placeholder="IMA Blog Category" required
++                    <input type="text" id="category" class="form-control" maxlength="100" placeholder="Creative Corner Category" required
+                     [disabled]="disableForm" formControlName="category">
+                     <span class="validation_msg" *ngIf="f.category.errors && isError">Please Enter Category</span>
+                 </div>
+@@ -58,7 +58,7 @@
+ 
+             <div class="row">
+                 <div class="form-group col-md-12">
+-                    <label for="title">Write Your Blog 
++                    <label for="title">Write your mind 
+                         <!-- <span class="char-count"> ({{descLength}}/3000) </span>  -->
+                         <span
+                             class="required">*</span></label>
+diff --git a/src/app/main/trg-team/home/ima-blogs/add-blog/add-blog.component.ts b/src/app/main/trg-team/home/ima-blogs/add-blog/add-blog.component.ts
+index dfae903..23b3d5e 100644
+--- a/src/app/main/trg-team/home/ima-blogs/add-blog/add-blog.component.ts
++++ b/src/app/main/trg-team/home/ima-blogs/add-blog/add-blog.component.ts
+@@ -36,7 +36,7 @@ export class AddBlogComponent implements OnInit {
+   otherCategory: boolean = false;
+ 
+   blogCategory: any[] = ['Lifestyle', 'Fitness', 'Sports', 'Warfare', 'Entertainment', 'Arts',
+-    'Historical', 'Others'];
++    'Historical', 'Cartoons/Caricatures', 'Others'];
+ 
+   constructor(private fb: FormBuilder, private router: Router, private spinner: NgxSpinnerService, private authService: AuthService, private dialog:MatDialog
+     ,private route: ActivatedRoute, private cdref: ChangeDetectorRef, private service: AdminService, private sharedService: SharedService) {
+diff --git a/src/app/main/trg-team/home/ima-blogs/ima-blogs.component.html b/src/app/main/trg-team/home/ima-blogs/ima-blogs.component.html
+index 3b923a6..b927833 100644
+--- a/src/app/main/trg-team/home/ima-blogs/ima-blogs.component.html
++++ b/src/app/main/trg-team/home/ima-blogs/ima-blogs.component.html
+@@ -1,5 +1,5 @@
+ <div class="mat-new">
+-    <h4 class="card-heading"> IMA Blogs <span class="sub-menu1"></span> </h4>
++    <h4 class="card-heading"> Creative Corner <span class="sub-menu1"></span> </h4>
+ 
+ </div>
+ 
+diff --git a/src/app/pages/about-us/about-us.component.html b/src/app/pages/about-us/about-us.component.html
+index df8137e..178582e 100644
+--- a/src/app/pages/about-us/about-us.component.html
++++ b/src/app/pages/about-us/about-us.component.html
+@@ -12,7 +12,7 @@
+ 
+   <div class="row">
+     <div class="col-md-10" id="con-r">
+-      <p><strong>The Indian Military Academy, Dehradun, trains Gentlemen Cadets for commissioning into the Indian Army,
++      <p><strong>The Indian Military Academy, Dehradun, trains Officer Cadets for commissioning into the Indian Army,
+           as also a large number of cadets from friendly foreign countries for their respective Armed forces.</strong>
+       </p>
+       <p><strong>The Academy boasts of a glorious history, spanning eight decades. The professionalism and rich
+@@ -32,11 +32,11 @@
+         factors not only develop self confidence but also culminate in enhancing the ability and readiness of the
+         trainees to assume leadership in critical situations.<br />TRAINING @ I.M.A.</p>
+       <img src="assets/img/about3.jpg">
+-      <p>On admission to the Academy one is christened as ‘Gentleman Cadet’. The Academy plays a vital role in moulding
++      <p>On admission to the Academy one is christened as ‘Officer Cadet’. The Academy plays a vital role in moulding
+         the differences and helps them anchored into a common bonding. Doing things together brings a sense of fellow
+         feeling.<br />LIFE OF A 'OC'</p>
+       <img src="assets/img/about4.jpg">
+-      <p>The Sword of Honour is the most coveted recognition that a Gentleman Cadet (OC) aspires to possess. It is given
++      <p>The Sword of Honour is the most coveted recognition that an Officer Cadet aspires to possess. It is given
+         for the best overall performance by a OC in Military Training, Academics, Sports and Extra Co-curricular
+         activities.<br />ROLL OF HONOUR</p>
+     </div>
+diff --git a/src/app/pages/about-us/history/history.component.html b/src/app/pages/about-us/history/history.component.html
+index 3334024..ae00d16 100644
+--- a/src/app/pages/about-us/history/history.component.html
++++ b/src/app/pages/about-us/history/history.component.html
+@@ -22,7 +22,7 @@
+         holding of Round Table Conference in London in 1930, which recommended the establishment of the Indian
+         Sandhurst. As a follow up action, a committee was set up under the chairmanship of Field Marshal Sir Philip
+         Chetwode, the then Commander-in-Chief of India, to work out modalities for establishment of an Indian Sandhurst.
+-        In Jul 1931, the committee recommended establishment of a military academy for induction of 40 Gentlemen Cadets
++        In Jul 1931, the committee recommended establishment of a military academy for induction of 40 Officer Cadets
+         (OC) in each term comprising 15 as Direct Entries, 15 from the ranks through Kitchner College, Nowgaon and 10
+         from princely states. The training span was initially envisaged for three years but later reduced to two and a
+         half years.</p>
+diff --git a/src/app/pages/about-us/life-gc/life-gc.component.html b/src/app/pages/about-us/life-gc/life-gc.component.html
+index db53080..a5b640e 100644
+--- a/src/app/pages/about-us/life-gc/life-gc.component.html
++++ b/src/app/pages/about-us/life-gc/life-gc.component.html
+@@ -13,7 +13,7 @@
+     <div class="col-md-10" id="con-r">
+      
+       <img src="assets/img/gc1.jpg">
+-      <p> trainee, on his admission to the Academy is christened as ‘Gentleman Cadet’ and is popularly known as a OC. The freshman OCs hail from diverse backgrounds with multifarious habits and grooming. The Academy plays a vital role in moulding those differences and helps them anchored into a common bonding. Doing things together brings a sense of fellow feeling. No OC gets preferential treatment. All are allowed to shape up together: together they break bread, together they play and together they receive the same kind of training. This bonding helps them to develop values such as camaraderie, espirit de corps and oneness that go a long way to give a separate identity to the corps of officers in the Army. It is simply that the future officers are made to acquire the finer graces of life and living which invests them with a personal dignity and a sense of appreciation for those finer pursuits which distinguish man and civilization. IMA encourages a Gentlemen Cadet to reflect on the greatness of India’s diversity, her secular foundation and to honour the traditions and customs of the Army. In a nutshell, IMA habitat helps him to become a rounded personality.</p>
++      <p> trainee, on his admission to the Academy is christened as ‘Officer Cadet’ and is popularly known as an OC. The freshman OCs hail from diverse backgrounds with multifarious habits and grooming. The Academy plays a vital role in moulding those differences and helps them anchored into a common bonding. Doing things together brings a sense of fellow feeling. No OC gets preferential treatment. All are allowed to shape up together: together they break bread, together they play and together they receive the same kind of training. This bonding helps them to develop values such as camaraderie, espirit de corps and oneness that go a long way to give a separate identity to the corps of officers in the Army. It is simply that the future officers are made to acquire the finer graces of life and living which invests them with a personal dignity and a sense of appreciation for those finer pursuits which distinguish man and civilization. IMA encourages an Officer Cadet to reflect on the greatness of India’s diversity, her secular foundation and to honour the traditions and customs of the Army. In a nutshell, IMA habitat helps him to become a rounded personality.</p>
+       <img src="assets/img/gc2.jpg"><br/>
+       <img src="assets/img/gc3.jpg"><br/>
+       <img src="assets/img/gc4.jpg"><br/>
+@@ -22,7 +22,7 @@
+       <img src="assets/img/gc5.jpg">
+      
+       <p>
+-        This self esteem and sense of honour is an article of cardinal faith in the training of Gentlemen Cadets. In fact, it is the hallmark of the training at the Indian Military Academy. It is this sense of honour, personal and of the group, imbibed at the Academy, which enables the officers to hold together and lead men in uniform against all odds in the battlefields. Also, it is the same sense of honour which inspires fair play and instinct to be trustworthy of both subordinates and superiors, making loyalty a matter of honour. A OC learns a great deal of values of life during his short stay in the Academy
++        This self esteem and sense of honour is an article of cardinal faith in the training of Officer Cadets. In fact, it is the hallmark of the training at the Indian Military Academy. It is this sense of honour, personal and of the group, imbibed at the Academy, which enables the officers to hold together and lead men in uniform against all odds in the battlefields. Also, it is the same sense of honour which inspires fair play and instinct to be trustworthy of both subordinates and superiors, making loyalty a matter of honour. A OC learns a great deal of values of life during his short stay in the Academy
+       </p>
+       <img src="assets/img/gc6.jpg"><br/>
+       <img src="assets/img/gc7.jpg"><br/>
+diff --git a/src/app/pages/add-imablog/add-imablog.component.html b/src/app/pages/add-imablog/add-imablog.component.html
+index 699c9f6..8bd31b9 100644
+--- a/src/app/pages/add-imablog/add-imablog.component.html
++++ b/src/app/pages/add-imablog/add-imablog.component.html
+@@ -2,7 +2,7 @@
+     <h4 class="card-heading">
+         <button mat-icon-button (click)="goBack()">
+             <mat-icon>chevron_left</mat-icon>
+-        </button>  IMA Blog
++        </button>  Creative Corner
+     </h4>
+ </div>
+ <mat-card>
+@@ -15,7 +15,7 @@
+                     <label for="title">Title <span class="required">*</span></label>
+                     <input type="text" id="title" class="form-control" maxlength="100" 
+                     [disabled]="disableForm"
+-                    placeholder="IMA Blog Title" required formControlName="title">
++                    placeholder="Creative Corner Title" required formControlName="title">
+                     <span class="validation_msg" *ngIf="f.title.errors && isError">Please Enter Title</span>
+                 </div>
+ 
+@@ -23,7 +23,7 @@
+                     <label for="category">Category <span class="required">*</span></label>
+                     <select #categorySelector id="category" class="form-control" (change)="categorySelected($event.target.value)"
+                     [attr.disabled]="disableForm ? 'disabled' : null" 
+-                     placeholder="IMA Blog Category" >
++                     placeholder="Creative Corner Category" >
+                         <option value="" selected hidden disabled>Select</option>
+                         <option *ngFor="let c of blogCategory" [value]="c">{{c}} </option>
+                     </select>
+@@ -32,7 +32,7 @@
+ 
+                 <div class="form-group col-md-6" *ngIf="otherCategory" >
+                     <label for="category">Category Name<span class="required">*</span></label>
+-                    <input type="text" id="category" class="form-control" maxlength="100" placeholder="IMA Blog Category" required
++                    <input type="text" id="category" class="form-control" maxlength="100" placeholder="Creative Corner Category" required
+                     [disabled]="disableForm" formControlName="category">
+                     <span class="validation_msg" *ngIf="f.category.errors && isError">Please Enter Category</span>
+                 </div>
+@@ -57,7 +57,7 @@
+ 
+             <div class="row">
+                 <div class="form-group col-md-12">
+-                    <label for="title">Write Your Blog 
++                    <label for="title">Write your mind 
+                         <!-- <span class="char-count"> ({{descLength}}/3000) </span>  -->
+                         <span
+                             class="required">*</span></label>
+diff --git a/src/app/pages/add-imablog/add-imablog.component.ts b/src/app/pages/add-imablog/add-imablog.component.ts
+index 719bb2c..b13b725 100644
+--- a/src/app/pages/add-imablog/add-imablog.component.ts
++++ b/src/app/pages/add-imablog/add-imablog.component.ts
+@@ -37,7 +37,7 @@ export class AddImablogComponent implements OnInit {
+   otherCategory: boolean = false;
+ 
+   blogCategory: any[] = ['Lifestyle', 'Fitness', 'Sports', 'Warfare', 'Entertainment', 'Arts',
+-    'Historical', 'Others'];
++    'Historical', 'Cartoons/Caricatures', 'Others'];
+   userDetails
+   bid
+   constructor(private fb: FormBuilder, private router: Router, private spinner: NgxSpinnerService, private authService: AuthService, private dialog: MatDialog
+diff --git a/src/app/pages/cyberpolicy/cyberpolicy.component.html b/src/app/pages/cyberpolicy/cyberpolicy.component.html
+index a1ef167..058bd02 100644
+--- a/src/app/pages/cyberpolicy/cyberpolicy.component.html
++++ b/src/app/pages/cyberpolicy/cyberpolicy.component.html
+@@ -2,7 +2,7 @@
+     <div id="center_section" class="container">
+         <div class="row">
+             <div class="col-md-12">
+-                <h4>CYBER POLICY</h4>
++                <h4>E-BOOKS</h4>
+     <div class="gene-card-content pad-t-none">
+         <div class="table-responsive">
+             <table class="table table-hover table-middle th-fw-light mb-0">
+@@ -50,7 +50,7 @@
+         <div class="container-fluid" style="margin-top: 30px;">
+             <div class="row">
+                 <div class="col-md-12">
+-                    <h4>CYBER POLICY</h4>
++                    <h4>E-BOOKS</h4>
+         
+                     <p></p>
+                     
+diff --git a/src/app/pages/cyberpolicy/cyberpolicy.component.ts b/src/app/pages/cyberpolicy/cyberpolicy.component.ts
+index a306471..7f2b994 100644
+--- a/src/app/pages/cyberpolicy/cyberpolicy.component.ts
++++ b/src/app/pages/cyberpolicy/cyberpolicy.component.ts
+@@ -81,7 +81,7 @@ export class CyberpolicyComponent implements OnInit {
+     this.dialog.open(DialogComponent, {
+       width: '1300px', height: '650px',
+       data: {
+-        type: 'document', title:'Cyber Policy' ,url: c.link
++        type: 'document', title:'E-Books' ,url: c.link
+       }
+     });
+   }
+diff --git a/src/app/pages/pages.component.html b/src/app/pages/pages.component.html
+index 2979e77..ed4a0b2 100644
+--- a/src/app/pages/pages.component.html
++++ b/src/app/pages/pages.component.html
+@@ -134,7 +134,7 @@
+                         <a href="javascript:void(0)" (click)="goToCMS()">CMS</a>
+                     </li>
+                     <li [routerLinkActive]="['active']"><a href="javascript:void(0);"
+-                            [routerLink]="['/pages/cyberpolicy']">Cyber Policy
++                            [routerLink]="['/pages/cyberpolicy']">E-Books
+                             <!-- <i class="fa fa-chevron-down"></i> -->
+                         </a>
+                         <!-- <ul class="sub-menu">
+@@ -144,7 +144,7 @@
+                     </ul> -->
+                     </li>
+                     <li [routerLinkActive]="['active']">
+-                        <a href="javascript:;" [routerLink]="['/pages/ima-blog']">IMA Blog </a>
++                        <a href="javascript:;" [routerLink]="['/pages/ima-blog']">Creative Corner </a>
+                     </li>
+                     <!-- <li [routerLinkActive]="['active']">
+                     <a href="javascript:;">Organisation<i
+@@ -256,14 +256,14 @@
+                 <li>
+                     <a href="javascript:void(0)" (click)="goToCMS()" >CMS</a>
+                 </li>
+-                <li><a href="javascript:;">Cyber Policy<i class="fa fa-chevron-down"></i></a>
++                <li><a href="javascript:;">E-Books<i class="fa fa-chevron-down"></i></a>
+                     <ul class="sub-menu">
+                         <li *ngIf="!cyberPolicies.length" ><a href="javascript:void(0)" >No Data Available</a></li>
+                         <li *ngFor="let c of cyberPolicies" ><a href="javascript:void(0)" (click)="openCyberPolicy(c)" >{{c.tabName}}</a></li>
+                     </ul>
+                 </li>
+                 <li>
+-                    <a href="javascript:;">IMA Blog </a>
++                    <a href="javascript:;">Creative Corner </a>
+                 </li>
+                 <li>
+                     <a href="javascript:;">Podcast</a>
+diff --git a/src/app/pages/pages.component.ts b/src/app/pages/pages.component.ts
+index e132510..bc6699a 100644
+--- a/src/app/pages/pages.component.ts
++++ b/src/app/pages/pages.component.ts
+@@ -102,7 +102,7 @@ export class PagesComponent implements OnInit {
+     this.dialog.open(DialogComponent, {
+       width: '1300px', height: '650px',
+       data: {
+-        type: 'document', title:'Cyber Policy' ,url: c.link
++        type: 'document', title:'E-Books' ,url: c.link
+       }
+     });
+   }
+diff --git a/src/app/session/loginV2/loginV2.component.ts b/src/app/session/loginV2/loginV2.component.ts
+index ba9419b..8152e8f 100644
+--- a/src/app/session/loginV2/loginV2.component.ts
++++ b/src/app/session/loginV2/loginV2.component.ts
+@@ -52,7 +52,7 @@ export class LoginV2Component implements OnDestroy {
+                } else if (res == 'delayDashboard') {
+                   this.title = 'Delay Dashboard'
+                } else if (res == 'gc') {
+-                  this.title = 'Gentleman Cadet'
++                  this.title = 'Officer Cadet'
+                } else if (res == 'trg-battalion') {
+                   this.title = 'TRG Battalion'
+                } else if (res == 'academic-depart') {
+@@ -137,7 +137,7 @@ export class LoginV2Component implements OnDestroy {
+ 
+       }
+       else if (this.ac == 'gc') {
+-         this.title = 'Gentleman Cadet'
++         this.title = 'Officer Cadet'
+ 
+       }
+       else if (this.ac == 'trg-battalion') {

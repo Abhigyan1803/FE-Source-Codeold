@@ -52,7 +52,7 @@ export class LoginV2Component implements OnDestroy {
                } else if (res == 'delayDashboard') {
                   this.title = 'Delay Dashboard'
                } else if (res == 'gc') {
-                  this.title = 'Gentleman Cadet'
+                  this.title = 'Officer Cadet'
                } else if (res == 'trg-battalion') {
                   this.title = 'TRG Battalion'
                } else if (res == 'academic-depart') {
@@ -137,7 +137,7 @@ export class LoginV2Component implements OnDestroy {
 
       }
       else if (this.ac == 'gc') {
-         this.title = 'Gentleman Cadet'
+         this.title = 'Officer Cadet'
 
       }
       else if (this.ac == 'trg-battalion') {

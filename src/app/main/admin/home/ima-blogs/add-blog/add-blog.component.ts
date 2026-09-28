@@ -38,7 +38,7 @@ export class AddBlogComponent implements OnInit {
   otherCategory: boolean = false;
 
   blogCategory: any[] = ['Lifestyle', 'Fitness', 'Sports', 'Warfare', 'Entertainment', 'Arts',
-    'Historical', 'Others'];
+    'Historical', 'Cartoons/Caricatures', 'Others'];
     userDetails
     bnId
     bid

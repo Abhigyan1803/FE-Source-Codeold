@@ -55,7 +55,7 @@ const AdminMenus = [
       { state: 'greybook', name: 'Greybook', type: 'link' },
       { state: 'central-library-management', name: 'Central Library', type: 'link' },
       { state: 'ebook', name: 'E-Book', type: 'link' },
-      { state: 'cyber-policy', name: 'Cyber Policy', type: 'link' },
+      { state: 'cyber-policy', name: 'E-Books', type: 'link' },
       { state: 'book-list', name: 'IMA Recommended Reading List', type: 'link' },
       { state: 'announcement', name: 'Announcements', type: 'link' },
       // { state: 'social-list', name: 'Social List', type: 'link' },
@@ -67,7 +67,7 @@ const AdminMenus = [
           { state: 'gallantry-awardees', name: 'Gallantry Awardees', type: 'link' },
         ]
       },
-      { state: 'ima-blog', name: 'IMA Blog', type: 'link' },
+      { state: 'ima-blog', name: 'Creative Corner', type: 'link' },
 
     ]
   },
@@ -1233,7 +1233,7 @@ const TRG_TEAM_MENU = [
   {
     id: 'common',
     state: 'main/trg-team/ima-blog',
-    name: 'IMA Blog',
+    name: 'Creative Corner',
     type: 'link',
     // icon: ''
   },
@@ -1270,7 +1270,7 @@ const TRG_TEAM_MENU = [
       { state: 'activity', name: 'IMA Activities', type: 'link' },
       { state: 'greybook', name: 'Greybook', type: 'link' },
       { state: 'central-library-management', name: 'Central Library', type: 'link' },
-      { state: 'cyber-policy', name: 'Cyber Policy', type: 'link' },
+      { state: 'cyber-policy', name: 'E-Books', type: 'link' },
       { state: 'book-list', name: 'IMA Recommended Reading List', type: 'link' },
       { state: 'announcement', name: 'Announcements', type: 'link' },
       // { state: 'social-list', name: 'Social List', type: 'link' },
@@ -1450,7 +1450,7 @@ const TRGBattalionMenus = [
   {
     id: 22,
     state: 'main/trg-battalion/parade-state',
-    name: 'Parade State of GCs',
+    name: 'Parade State of OCs',
     type: 'link',
   },
   {
@@ -1462,7 +1462,7 @@ const TRGBattalionMenus = [
   {
     id: 'common',
     state: 'main/trg-battalion/ima-blog',
-    name: 'IMA Blog',
+    name: 'Creative Corner',
     type: 'link',
     // icon: ''
   },
@@ -1528,7 +1528,7 @@ const ADJUTANT_MENU = [
     name: 'General Instruction',
     type: 'sub',
     children: [
-      { state: 'reception', name: 'Reception of new GCs', type: 'link' },
+      { state: 'reception', name: 'Reception of new OCs', type: 'link' },
       { state: 'pop', name: 'POP', type: 'link' },
       { state: 'sop', name: 'SOPs', type: 'link' },
       // {
@@ -1819,7 +1819,7 @@ const ADJUTANT_MENU = [
       { state: 'activity', name: 'IMA Activities', type: 'link' },
       { state: 'greybook', name: 'Greybook', type: 'link' },
       { state: 'central-library-management', name: 'Central Library', type: 'link' },
-      { state: 'cyber-policy', name: 'Cyber Policy', type: 'link' },
+      { state: 'cyber-policy', name: 'E-Books', type: 'link' },
       { state: 'book-list', name: 'IMA Recommended Reading List', type: 'link' },
       { state: 'announcement', name: 'Announcements', type: 'link' },
       // { state: 'social-list', name: 'Social List', type: 'link' },
@@ -1865,7 +1865,7 @@ const ADJUTANT_MENU = [
   {
     id: 'common',
     state: 'main/adjutant-branch/ima-blog',
-    name: 'IMA Blog',
+    name: 'Creative Corner',
     type: 'link',
     // icon: ''
   },
@@ -1915,7 +1915,7 @@ const GS_BRANCH_MENUS = [
       { state: 'activity', name: 'IMA Activities', type: 'link' },
       { state: 'greybook', name: 'Greybook', type: 'link' },
       { state: 'central-library-management', name: 'Central Library', type: 'link' },
-      { state: 'cyber-policy', name: 'Cyber Policy', type: 'link' },
+      { state: 'cyber-policy', name: 'E-Books', type: 'link' },
       { state: 'book-list', name: 'IMA Recommended Reading List', type: 'link' },
       { state: 'announcement', name: 'Announcements', type: 'link' },
       // { state: 'social-list', name: 'Social List', type: 'link' },
@@ -1927,7 +1927,7 @@ const GS_BRANCH_MENUS = [
           { state: 'gallantry-awardees', name: 'Gallantry Awardees', type: 'link' },
         ]
       },
-      { state: 'ima-blog', name: 'IMA Blog', type: 'link' },
+      { state: 'ima-blog', name: 'Creative Corner', type: 'link' },
 
     ]
   },
@@ -2078,7 +2078,7 @@ const GS_BRANCH_MENUS = [
   {
     id: 'common',
     state: 'main/gs-branch/ima-blog',
-    name: 'IMA Blog',
+    name: 'Creative Corner',
     type: 'link',
     // icon: ''
   },
@@ -3193,7 +3193,7 @@ const ACADEMIC_DEPARTMENT = [
   {
     id: 'common',
     state: 'main/academic-depart/ima-blog',
-    name: 'IMA Blog',
+    name: 'Creative Corner',
     type: 'link',
     // icon: ''
   },

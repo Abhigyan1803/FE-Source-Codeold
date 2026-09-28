@@ -15,7 +15,7 @@ export class AddCyberPolicyComponent implements OnInit {
 
 
   id;
-  pTitle = "Add Cyber Policy";
+  pTitle = "Add E-Books";
   
   @ViewChild('file', { static: true }) docFile;
   unSelectedFile;
@@ -37,7 +37,7 @@ export class AddCyberPolicyComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.router.url.includes('view-cyber-policy')) {
-      this.pTitle = 'View Cyber Policy'
+      this.pTitle = 'View E-Books'
       this.id = this.route.snapshot.queryParamMap.get('id')
       // console.log(this.id);
       this.service.getCyberPolicyById(this.id).subscribe(

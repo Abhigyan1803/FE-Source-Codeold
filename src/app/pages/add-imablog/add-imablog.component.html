@@ -2,7 +2,7 @@
     <h4 class="card-heading">
         <button mat-icon-button (click)="goBack()">
             <mat-icon>chevron_left</mat-icon>
-        </button>  IMA Blog
+        </button>  Creative Corner
     </h4>
 </div>
 <mat-card>
@@ -15,7 +15,7 @@
                     <label for="title">Title <span class="required">*</span></label>
                     <input type="text" id="title" class="form-control" maxlength="100" 
                     [disabled]="disableForm"
-                    placeholder="IMA Blog Title" required formControlName="title">
+                    placeholder="Creative Corner Title" required formControlName="title">
                     <span class="validation_msg" *ngIf="f.title.errors && isError">Please Enter Title</span>
                 </div>
 
@@ -23,7 +23,7 @@
                     <label for="category">Category <span class="required">*</span></label>
                     <select #categorySelector id="category" class="form-control" (change)="categorySelected($event.target.value)"
                     [attr.disabled]="disableForm ? 'disabled' : null" 
-                     placeholder="IMA Blog Category" >
+                     placeholder="Creative Corner Category" >
                         <option value="" selected hidden disabled>Select</option>
                         <option *ngFor="let c of blogCategory" [value]="c">{{c}} </option>
                     </select>
@@ -32,7 +32,7 @@
 
                 <div class="form-group col-md-6" *ngIf="otherCategory" >
                     <label for="category">Category Name<span class="required">*</span></label>
-                    <input type="text" id="category" class="form-control" maxlength="100" placeholder="IMA Blog Category" required
+                    <input type="text" id="category" class="form-control" maxlength="100" placeholder="Creative Corner Category" required
                     [disabled]="disableForm" formControlName="category">
                     <span class="validation_msg" *ngIf="f.category.errors && isError">Please Enter Category</span>
                 </div>
@@ -57,7 +57,7 @@
 
             <div class="row">
                 <div class="form-group col-md-12">
-                    <label for="title">Write Your Blog 
+                    <label for="title">Write your mind 
                         <!-- <span class="char-count"> ({{descLength}}/3000) </span>  -->
                         <span
                             class="required">*</span></label>

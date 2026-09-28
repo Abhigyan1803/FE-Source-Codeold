@@ -36,7 +36,7 @@ export class AddBlogComponent implements OnInit {
   otherCategory: boolean = false;
 
   blogCategory: any[] = ['Lifestyle', 'Fitness', 'Sports', 'Warfare', 'Entertainment', 'Arts',
-    'Historical', 'Others'];
+    'Historical', 'Cartoons/Caricatures', 'Others'];
 
   constructor(private fb: FormBuilder, private router: Router, private spinner: NgxSpinnerService, private authService: AuthService, private dialog:MatDialog
     ,private route: ActivatedRoute, private cdref: ChangeDetectorRef, private service: AdminService, private sharedService: SharedService) {

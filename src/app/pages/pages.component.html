@@ -134,7 +134,7 @@
                         <a href="javascript:void(0)" (click)="goToCMS()">CMS</a>
                     </li>
                     <li [routerLinkActive]="['active']"><a href="javascript:void(0);"
-                            [routerLink]="['/pages/cyberpolicy']">Cyber Policy
+                            [routerLink]="['/pages/cyberpolicy']">E-Books
                             <!-- <i class="fa fa-chevron-down"></i> -->
                         </a>
                         <!-- <ul class="sub-menu">
@@ -144,7 +144,7 @@
                     </ul> -->
                     </li>
                     <li [routerLinkActive]="['active']">
-                        <a href="javascript:;" [routerLink]="['/pages/ima-blog']">IMA Blog </a>
+                        <a href="javascript:;" [routerLink]="['/pages/ima-blog']">Creative Corner </a>
                     </li>
                     <!-- <li [routerLinkActive]="['active']">
                     <a href="javascript:;">Organisation<i
@@ -256,14 +256,14 @@
                 <li>
                     <a href="javascript:void(0)" (click)="goToCMS()" >CMS</a>
                 </li>
-                <li><a href="javascript:;">Cyber Policy<i class="fa fa-chevron-down"></i></a>
+                <li><a href="javascript:;">E-Books<i class="fa fa-chevron-down"></i></a>
                     <ul class="sub-menu">
                         <li *ngIf="!cyberPolicies.length" ><a href="javascript:void(0)" >No Data Available</a></li>
                         <li *ngFor="let c of cyberPolicies" ><a href="javascript:void(0)" (click)="openCyberPolicy(c)" >{{c.tabName}}</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="javascript:;">IMA Blog </a>
+                    <a href="javascript:;">Creative Corner </a>
                 </li>
                 <li>
                     <a href="javascript:;">Podcast</a>

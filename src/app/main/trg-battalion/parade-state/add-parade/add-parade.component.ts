@@ -21,7 +21,7 @@ export class AddParadeComponent implements OnInit {
   docUrl;
   id;
   previewImg;
-  pTitle = "Add Pared State of GCs";
+  pTitle = "Add Pared State of OCs";
 
   addParadeForm:FormGroup= new FormGroup({});
   constructor(private fb:FormBuilder, private router:Router, private route:ActivatedRoute, private cdref:ChangeDetectorRef, private spinner:NgxSpinnerService,
@@ -40,7 +40,7 @@ export class AddParadeComponent implements OnInit {
     if(this.router.url.includes('view-paradestate')){
       this.id=this.route.snapshot.queryParamMap.get('id');
       
-      this.pTitle = "View Pared State of GCs";
+      this.pTitle = "View Pared State of OCs";
 
       this._trgBattalion.getParadeStateById(this.id).subscribe(
         res=>{
@@ -156,7 +156,7 @@ export class AddParadeComponent implements OnInit {
     this.dialog.open(DialogComponent, {
       width: '1300px', height: '650px',
       data: {
-        type: 'document', title:"Pared State of GCs", url: this.docUrl
+        type: 'document', title:"Pared State of OCs", url: this.docUrl
       }
     });
   }

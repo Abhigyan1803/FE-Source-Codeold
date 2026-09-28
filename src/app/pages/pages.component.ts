@@ -102,7 +102,7 @@ export class PagesComponent implements OnInit {
     this.dialog.open(DialogComponent, {
       width: '1300px', height: '650px',
       data: {
-        type: 'document', title:'Cyber Policy' ,url: c.link
+        type: 'document', title:'E-Books' ,url: c.link
       }
     });
   }

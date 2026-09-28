@@ -60,7 +60,7 @@ openDoc(e) {
   this.dialog.open(DialogComponent, {
     width: '1300px', height: '650px',
     data: {
-      type: 'document', title:"Pared State of GCs", url: e.document
+      type: 'document', title:"Pared State of OCs", url: e.document
     }
   });
 }
